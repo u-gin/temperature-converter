@@ -24,86 +24,106 @@ int main(int argc, char const *argv[])
 
 }
 
-void convertToCelcius(char unitToConvert)
+void convertToCelcius(char unitToConvert, double temp)
 {
+    double celciusValue;
     switch (unitToConvert)
     {
     case 'F':
-        /* code */
+        celciusValue = (temp - 32) * (5/9);
+        printf("Celcius value: %0.3lf", celciusValue);
         break;
 
     case 'K':
-        /* code */
+        celciusValue = (temp - 273.15);
+        printf("Celcius value: %0.3lf", celciusValue);
         break;
 
     case 'R':
-        /* code */
+        celciusValue = (temp - 491.67) * (5 / 9);
+        printf("Celcius value: %0.3lf", celciusValue);
         break;
 
     default:
+    printf("Invalid temperature code entered");
         break;
     }
 }
 
-void convertToFahrrenheit(char unitToConvert)
+void convertToFahrrenheit(char unitToConvert, double temp)
 {
+    double fahrenheitValue;
     switch (unitToConvert)
     {
     case 'C':
-        /* code */
+        fahrenheitValue = (temp * (9/5) + 32);
+        printf("Fahrenheit value: %0.3lf", fahrenheitValue);
         break;
 
     case 'K':
-        /* code */
+        fahrenheitValue = (temp * (9/5) - 459.67);
+        printf("Fahrenheit value: %0.3lf", fahrenheitValue);
         break;
 
     case 'R':
-        /* code */
+        fahrenheitValue = (temp - 459.67);
+        printf("Fahrenheit value: %0.3lf", fahrenheitValue);
         break;
 
     default:
+        printf("Invalid temperature code entered");
         break;
     }
 }
 
-void convertToRankine(char unitToConvert)
+void convertToRankine(char unitToConvert, double temp)
 {
+    double rankineValue;
     switch (unitToConvert)
     {
     case 'C':
-        /* code */
+        rankineValue = (temp + 273.15) * (9/5);
+        printf("Rankine value: %0.3lf", rankineValue);
         break;
 
     case 'F':
-        /* code */
+        rankineValue = (temp + 459.67);
+        printf("Rankine value: %0.3lf", rankineValue);
         break;
 
     case 'K':
-        /* code */
+        rankineValue = (temp * (9/5));
+        printf("Rankine value: %0.3lf", rankineValue);
         break;
 
     default:
+        printf("Invalid temperature code entered");
         break;
     }
 }
 
-void convertToKelvin(char unitToConvert)
+void convertToKelvin(char unitToConvert, double temp)
 {
+    double kelvinValue;
     switch (unitToConvert)
     {
     case 'C':
-        /* code */
+        kelvinValue = (temp + 273.15);
+        printf("Kelvin value: %0.3lf", kelvinValue);
         break;
 
     case 'F':
-        /* code */
+        kelvinValue = (temp + 459.67) * (5/9);
+        printf("Kelvin value: %0.3lf", kelvinValue);
         break;
 
     case 'R':
-        /* code */
+        kelvinValue = (temp * (5 / 9));
+        printf("Kelvin value: %0.3lf", kelvinValue);
         break;
 
     default:
+        printf("Invalid temperature code entered");
         break;
     }
 }
