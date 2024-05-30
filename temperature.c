@@ -22,6 +22,8 @@ int main(int argc, char const *argv[])
     printf("\nWhat unit do you want to convert to:");
     scanf("%c", &unitToConvert);
 
+    mainConverter(unitToConvert, temp, currentUnit);
+
 }
 
 void convertToCelcius(char unitToConvert, double temp)
@@ -124,6 +126,30 @@ void convertToKelvin(char unitToConvert, double temp)
 
     default:
         printf("Invalid temperature code entered");
+        break;
+    }
+}
+
+void mainConverter(char unitToConvert, double temp, char currentUnit)
+{
+    switch (currentUnit)
+    {
+    case 'C':
+        convertToCelcius(unitToConvert, temp);
+        break;
+
+    case 'F':
+        convertToFahrrenheit(unitToConvert, temp);
+        break;
+
+    case 'K':
+        convertToKelvin(unitToConvert, temp);
+        break;
+    
+    case 'R':
+        convertToRankine(unitToConvert, temp);
+        break;
+    default:
         break;
     }
 }
